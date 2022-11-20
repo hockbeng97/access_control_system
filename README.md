@@ -74,20 +74,20 @@ The sample data insert as below:
   
 <b> Test Case: </b>
 
-Get Request: <br/>
-URL: localhost:8082/rest/feature/get-can-access-by-email-and-feature-name <br/>
-Parameter: <br/>
-a) email = abc@gmail.com <br/>
-b) featureName = view <br/>
+1) Get Request: <br/>
+  URL: localhost:8082/rest/feature/get-can-access-by-email-and-feature-name <br/>
+  Parameter: <br/>
+   a) email = abc@gmail.com <br/>
+   b) featureName = view <br/>
 
-POST Request: <br/>
-URL: localhost:8082/rest/feature/add-access <br/>
-Body : <br/>
-{
-    "featureName": "view",
-    "email": "abc@gmail.com",
-    "enable": true
-}
+2) POST Request: <br/>
+  URL: localhost:8082/rest/feature/add-access <br/>
+  Body : <br/>
+  {
+      "featureName": "view",
+      "email": "abc@gmail.com",
+      "enable": true
+  }
 
 
 
