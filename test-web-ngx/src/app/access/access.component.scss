@@ -1,0 +1,31 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+tr {
+  margin: 8px 0;
+}
+mat-slide-toggle {
+  margin: 8px 0;
+}
+
+button {
+  margin: 10px 10px;
+}
+
+.home-navi {
+  height: 100px;
+  width: 90%;
+  line-height: 100px;
+  border: 2px dashed #f69c55;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  margin: 10px auto 10px auto;
+  background-color: beige;
+  vertical-align:middle;
+  font-size: 50px;
+  text-decoration: none;
+}
+
+.home-navi:hover {
+  background-color: lightgreen;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modify</title>
+</head>
+
+<h1>{{this.form.ui.operation}} Access</h1>
+
+<div>
+  <table>
+    <tr>
+      <td>
+        <label>Email: </label>
+        <input type="text" [(ngModel)]="this.form.data.email">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Feature: </label>
+        <input type="text" [(ngModel)]="this.form.data.featureName">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>Can Access: </label>
+        <mat-slide-toggle [(ngModel)]="this.form.data.enable"></mat-slide-toggle>
+      </td>
+    </tr>
+  </table>
+
+  <button (click)="onClickAddAccess()"> Submit </button>
+  <button (click)="onClickBack()"> Back </button>
+</div>
+
+<body>
+
+</body>
+</html>
