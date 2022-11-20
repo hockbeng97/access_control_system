@@ -1,6 +1,6 @@
 package com.test.rest;
 
-import com.test.web.core.TestApplication;
+import com.test.web.core.AccessApplication;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -14,7 +14,7 @@ public class AccessRest {
 
 	public static void main(String[] args) {
 
-		ConfigurableApplicationContext cac = SpringApplication.run(TestApplication.class, args);
+		ConfigurableApplicationContext cac = SpringApplication.run(AccessApplication.class, args);
 		if(logger.isDebugEnabled()){
 			String[] beanNames = cac.getBeanDefinitionNames();
 			Arrays.sort(beanNames);
