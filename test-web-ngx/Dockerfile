@@ -3,7 +3,7 @@ COPY . /app
 WORKDIR /app
 COPY test-web-ngx/package.json test-web-ngx/package-lock.json ./
 RUN npm i
-WORKDIR /test-web-ngx
+WORKDIR test-web-ngx
 RUN npm run build
 
 #FROM nginx:latest-alphine
