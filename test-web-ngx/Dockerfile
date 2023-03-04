@@ -8,7 +8,7 @@ COPY test-web-ngx .
 RUN npm run build
 
 FROM nginx:latest
-COPY --from=builder /app/dist/frontend /usr/share/nginx/html
+COPY --from=0 /app/dist/frontend /usr/share/nginx/html
 EXPOSE 50001
 # Start the nginx server
 CMD ["nginx", "-g", "daemon off;"]
