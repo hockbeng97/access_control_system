@@ -1,6 +1,6 @@
 FROM node:latest as builder
 
-WORKDIR /app
+WORKDIR test-web-ngx
 COPY test-web-ngx/package.json test-web-ngx/package-lock.json ./
 RUN npm i
 COPY . /app
