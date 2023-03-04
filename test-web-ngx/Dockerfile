@@ -1,9 +1,9 @@
 FROM node:latest as builder
 
-WORKDIR test-web-ngx
+WORKDIR /app
 COPY test-web-ngx/package.json test-web-ngx/package-lock.json ./
 RUN npm i
-COPY . /app
+COPY . .
 # WORKDIR test-web-ngx
 RUN npm run build
 
