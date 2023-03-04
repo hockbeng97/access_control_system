@@ -6,13 +6,11 @@ RUN npm i
 WORKDIR test-web-ngx
 RUN npm run build
 
-#FROM nginx:latest
-#COPY --from=0 /test-web-ngx/dist/frontend /usr/share/nginx/html
-#EXPOSE 50001
+FROM nginx:latest
+COPY --from=builder /test-web-ngx/dist/frontend /usr/share/nginx/html
+EXPOSE 50001
 # Start the nginx server
-#CMD ["nginx", "-g", "daemon off;"]
-ADD test-web-ngx/target/test-web-ngx-0.0.1-SNAPSHOT.jar test-web-ngx-0.0.1-SNAPSHOT.jar
-ENTRYPOINT ["java", "-jar", "test-web-ngx-0.0.1-SNAPSHOT.jar"]
+CMD ["nginx", "-g", "daemon off;"]
 
 #FROM nginx:latest-alphine
 #EXPOSE 8080
