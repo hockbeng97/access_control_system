@@ -4,7 +4,10 @@ WORKDIR /app
 COPY test-web-ngx/package.json test-web-ngx/package-lock.json ./
 RUN npm i
 WORKDIR test-web-ngx
-CMD ["npm run start"]
+
+FROM nginx:latest
+# Start the nginx server
+CMD ["nginx", "-g", "daemon off;"]
 
 #FROM nginx:latest-alphine
 #EXPOSE 8080
