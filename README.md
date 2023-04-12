@@ -2,7 +2,7 @@
 
 This is a simple web applcation which built by Angular, Java and Spring Boot.
 
-A H2 database (In-memory Database) is used which can access by <b> localhos:t8082/h2-console </b> 
+A H2 database (In-memory Database) is used which can access by <b> localhost:8082/h2-console </b> 
 
 A simple databse table called <b> "access" </b> is created. Please refer the data dictionary below:
 
