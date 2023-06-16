@@ -33,7 +33,7 @@ jobs:
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
-        image: bengdev/access-control
+        image: bengdev/access-control-rest
         tags: v1, latest
         registry: docker.io
         dockerfile: Dockerfile.ci
