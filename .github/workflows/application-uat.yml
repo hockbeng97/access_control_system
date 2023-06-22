@@ -32,7 +32,7 @@ jobs:
       
     - name: Build and push Docker image Rest
       run: |
-        echo ${{ secrets.ACR_PASSWORD_REST }} | docker login $ACR_LOGIN_SERVER -u $ACR_USERNAME --password-stdin
+        echo ${{ secrets.ACR_PASSWORD_REST }} | docker login accesscontrolrest.azurecr.io -u ${{ secrets.ACR_USERNAME_REST }} -p ${{ secrets.ACR_PASSWORD_REST }}
         docker build -f test-web-rest/Dockerfile -t accesscontrolrest.azurecr.io/test-web-rest:latest .
         docker push accesscontrolrest.azurecr.io/test-web-rest:latest
 
