@@ -38,7 +38,7 @@ jobs:
 
     - name: Build and push Docker image NGX
       run: |
-        docker login accesscontrolngx.azurecr.io
+        echo ${{ secrets.ACR_PASSWORD_NGX }} | docker login accesscontrolngx.azurecr.io -u ${{ secrets.ACR_USERNAME_NGX }} -p ${{ secrets.ACR_PASSWORD_NGX }}
         docker build -f test-web-ngx/Dockerfile -t accesscontrolngx.azurecr.io/test-web-ngx:latest .
         docker push accesscontrolngx.azurecr.io/test-web-ngx:latest
 
